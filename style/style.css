@@ -1,0 +1,319 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --color-fondo: #0C2D48;
+    --color-principal: #B1D4E0;
+    --color-secundario: #145DA0;
+    --color-button: #2E8BC0;
+}
+
+* {
+    box-sizing: border-box; /*trabajar con tamaños reales en los divs*/
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 10px;
+    color: var(--color-principal);
+    font-family: "Schibsted Grotesk", sans-serif;
+}
+
+
+/* TODO: HEADER */
+/* quitar diseño a hipervinculos */
+a {
+    text-decoration: none;
+}
+
+/* quitar el punto de los hijos de lista */
+li {
+    list-style: none;
+}
+
+
+header {
+    background-color: var(--color-fondo);
+    height: 100px;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content:space-between;
+    width: 90%;
+    height: 100%;
+    margin: auto; /* es como entrar ss elementos del div */
+}
+
+header .logo {
+    display: flex;
+    height: 100%;
+    width: 10rem;
+}
+
+header .logo img{
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+header .logo img:hover{
+    cursor: pointer;
+}
+
+header nav ul{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li {
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+header nav ul li:hover {
+    color: var(--color-button);
+    cursor: pointer;
+    transform: scale(120%, 120%);
+    /* color: red; */
+    color: grey;
+}
+
+
+/* TODO: CLASS ESCONDIDA, NO SE VE */
+header nav.menu-principal-movil {
+    display: none;
+    align-self: center;
+}
+
+header nav.menu-principal-movil i{
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* TODO: MAIN BANNER */
+section.banner{
+    background: linear-gradient( to bottom, var(--color-button) , var(--color-secundario));
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.banner h1{
+    font-size: 10rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+section.banner p{
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 3rem;
+}
+
+section.banner button{
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--color-fondo);
+    color: white;
+    margin: 2rem 0;
+    padding: 1.3rem;
+}
+
+section.banner button:hover{ /*cuando pase por el elemento h1, p,*/
+    cursor: pointer;
+    transform: scale(120%, 120%); /* aumentar mientras se pase el puntero */
+}
+
+
+
+
+/* TODO: FOOTER CONTENEDOR */
+footer {
+    background-color: var(--color-fondo);
+}
+
+footer section.contenedor{
+    width: 90%;
+    margin: auto;
+    padding: 6rem 0 2rem 0; /* top, right, botton, left */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* relaiza automaticamente parte responsive, siempre y cuando se establezca display: flex*/
+}
+
+footer .logo img{
+    margin: 2rem;
+    margin-top: 1rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+}
+
+footer .menu-secundario{
+    display: flex;
+    flex-wrap: wrap; /*efecto de responsive, se acomoda automaticamente */
+    flex-grow: 2; 
+    justify-content: space-evenly;
+}
+
+footer .menu-secundario ul li{
+    font-size: 1.4rem;
+    padding: 0.8rem;
+}
+
+footer .menu-secundario ul li:hover{
+    color: var(--color-button);
+    cursor: pointer;
+    transform: scale(120%, 120%);
+}
+
+footer .menu-secundario ul .encabezado{
+    font-weight: 700;
+    font-size: 2rem;
+    color: grey;
+    cursor: auto !important;
+}
+
+footer .menu-secundario ul .encabezado:hover{
+    transform: none;
+    cursor: auto;
+    color: grey;
+}
+
+footer .social {
+    flex-grow: 1;
+    margin: 20px 0;
+}
+
+footer .social ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer .social ul li{
+    font-size: 2.5rem;
+    background-color: var(--color-button);
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+footer .social ul li:hover{
+    font-size: 2.5rem;
+    background-color: var(--color-secundario);
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    color: var(--color-principal);
+    transform: 120(120%120 120%);
+}
+
+footer .ubicacion{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+}
+
+footer .ubicacion span {
+    padding: 0rem 0.5rem;
+    font-size: 1.5rem;
+    cursor: auto;
+    color: grey;
+    font-weight: bold;
+}
+
+footer .ubicacion i {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+footer .extras{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
+}
+
+footer .extras ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .extras ul li {
+    margin-right: 2rem;
+    font-weight: 600;
+    color: grey;
+    font-size: 1.5rem;
+}
+
+footer .extras ul li:hover {
+    margin-right: 2rem;
+    font-weight: 600;
+    color: grey;
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+    transform: scale(120%, 120%);
+}
+
+footer .extras span {
+    color: grey;
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+
+
+@media (max-width: 768px) {
+    header nav.menu-principal {
+        display: none;
+    }
+
+    header nav.menu-principal-movil {
+        display: inline;
+    }
+
+
+    main section.banner h1 {
+        font-size: 5rem;
+    }
+
+    footer section .menu-secundario {
+        width: 100%;
+        margin: 1rem auto;
+        flex-direction: column;
+    }
+
+    footer section .compania, footer section .comunidad, footer section .links {
+        margin-top: 2rem;
+    }
+
+}
